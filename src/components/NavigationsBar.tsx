@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './NavigationsBar.css';
 import Logo from '../images/logo.png';
+import { sider } from '../AppRouter';
 
 export default function NavigationsBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,14 +14,14 @@ export default function NavigationsBar() {
         <div id="bar">
             <img src={Logo} id='bar-logo' alt='logo'></img>
             <div id="menu-icon" onClick={toggleMenu}>
-                &#9776; {/* This is the hamburger icon */}
+                &#9776; {/* hamburger toggle icon */}
             </div>
             <div id="links" className={isMenuOpen ? 'show' : ''}>
-                <a href="/">Forside</a>
-                <a href='/rejsetemaer'>Rejsetemaer</a>
-                <a href='/overnatning'>Overnatning</a>
-                <a href='/info'>Praktisk info</a>
-                <a href='/kontakt'>Info & Kontakt</a>
+                {sider.map((side) => {
+                    return (
+                        <a href={"/" + side.sti}>{side.titel}</a>
+                    )
+                })}
             </div>
         </div>
     );
