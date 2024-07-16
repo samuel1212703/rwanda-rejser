@@ -1,24 +1,60 @@
-#bar{
-    text-align: center;
-    background-color: white;
+/* NavigationsBar.css */
+
+#bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative; /* Make sure #bar has positioning context */
+    z-index: 10; /* Higher than the front page image */
 }
 
 #bar-logo {
-    display: inline;
-    max-width: 160px;
+    height: 50px;
 }
 
 #links {
-    width: 50%;
-    display: inline;
+    display: flex;
+    gap: 20px;
 }
 
-#links * {
+#links a {
+    color: white;
     text-decoration: none;
-    color: black;
-    margin-left: 36px;
+    padding: 10px;
 }
 
-#links :hover {
-    text-decoration: underline;
+#menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    #links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 20; /* Higher than the front page image */
+    }
+
+    #links a {
+        padding: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    #links.show {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
 }

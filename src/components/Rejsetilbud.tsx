@@ -1,20 +1,40 @@
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+
 export interface TilbudProps {
     tilbud: Array<{ titel: string, beskrivelse: string, billede: string }>
 }
 
-export default function Rejsetilbud({tilbud}: TilbudProps) {
+export default function Rejsetilbud({ tilbud }: TilbudProps) {
     return (
-        <div>
-            {tilbud.map((t, index) => {
-                const width = 100 / tilbud.length;
-                return (
-                    <div key={index} style={{width: width + "%", display: 'inline-block', padding: '2vw'}}>
-                        <h3>{t.titel}</h3>
-                        <img src={t.billede} style={{width: '70%', height: '320px', objectFit: 'cover'}} alt={t.titel} />
-                        <p>{t.beskrivelse}</p>
-                    </div>
-                )
-            })}
-        </div>
-    )
+        <Box sx={{ flexGrow: 1, padding: '20px' }}>
+            <Grid container spacing={4}>
+                {tilbud.map((t, index) => (
+                    <Grid item xs={12} md={4} key={index}>
+                        <Card sx={{ maxWidth: 445, boxShadow: 3, borderRadius: 2, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.05)' } }}>
+                            <CardMedia
+                                component="img"
+                                height="400"
+                                image={t.billede}
+                                alt={t.titel}
+                                sx={{ objectFit: 'cover' }}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    {t.titel}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {t.beskrivelse}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                ))}
+            </Grid>
+        </Box>
+    );
 }
