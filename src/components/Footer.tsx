@@ -5,7 +5,7 @@ export default function Footer() {
 
     return (
         <div style={{
-            width: '100vw',
+            width: '100%',
             display: 'flex',
             justifyContent: 'space-evenly',
             backgroundColor: 'grey',

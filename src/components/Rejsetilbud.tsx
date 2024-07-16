@@ -14,8 +14,9 @@ export default function Rejsetilbud({ tilbud }: TilbudProps) {
         <Box sx={{ flexGrow: 1, padding: '20px' }}>
             <Grid container spacing={4}>
                 {tilbud.map((t, index) => (
-                    <Grid item xs={12} md={4} key={index}>
-                        <Card sx={{ maxWidth: 445, boxShadow: 3, borderRadius: 2, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.05)' } }}>
+                    <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Card sx={{ width: '100%', padding:'1.5%', boxShadow: 4, borderRadius: 2, transition: 'transform 0.3s', '&:hover': { transform: 'scale(1.05)', borderRadius: 1
+                         } }}>
                             <CardMedia
                                 component="img"
                                 height="400"
