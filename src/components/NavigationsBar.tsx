@@ -10,6 +10,9 @@ export default function NavigationsBar() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const mainLinks = sider.filter(side => !side.sti.startsWith('tilbud/'));
+    const tilbudLinks = sider.filter(side => side.sti.startsWith('tilbud/'));
+
     return (
         <div id="bar">
             <img src={Logo} id='bar-logo' alt='logo'></img>
@@ -17,11 +20,24 @@ export default function NavigationsBar() {
                 &#9776; {/* hamburger toggle icon */}
             </div>
             <div id="links" className={isMenuOpen ? 'show' : ''}>
-                {sider.map((side) => {
-                    return (
-                        <a href={"/" + side.sti}>{side.titel}</a>
-                    )
+                {mainLinks.map((side) => {
+                    if (side.sti !== "*") {
+                        return (
+                            <a href={"/" + side.sti} key={side.sti}>{side.titel}</a>
+                        )
+                    }
                 })}
+                <div className="dropdown">
+                    <a href="/tilbud">Tilbud</a>
+                    <div className="dropdown-content">
+                        {tilbudLinks.map((side) => (
+                            <a href={"/" + side.sti} key={side.sti}>{side.titel}</a>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href={"tel:" + process.env.REACT_APP_TELEFON_NUMMER}>{process.env.REACT_APP_TELEFON_NUMMER}</a>
             </div>
         </div>
     );

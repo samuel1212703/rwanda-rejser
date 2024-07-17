@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavigationsBar from './components/NavigationsBar';
 import Footer from './components/Footer';
