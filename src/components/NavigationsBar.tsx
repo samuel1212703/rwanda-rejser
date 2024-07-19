@@ -1,44 +1,80 @@
 import { useState } from 'react';
-import './NavigationsBar.css';
+import { AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Box } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../images/logo.png';
 import { sider } from '../AppRouter';
+import { Link } from 'react-router-dom';
 
 export default function NavigationsBar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+    const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleMenuClose = () => {
+        setAnchorEl(null);
     };
 
     const mainLinks = sider.filter(side => !side.sti.startsWith('tilbud/'));
-    const tilbudLinks = sider.filter(side => side.sti.startsWith('tilbud/'));
 
     return (
-        <div id="bar">
-            <img src={Logo} id='bar-logo' alt='logo'></img>
-            <div id="menu-icon" onClick={toggleMenu}>
-                &#9776; {/* hamburger toggle icon */}
-            </div>
-            <div id="links" className={isMenuOpen ? 'show' : ''}>
-                {mainLinks.map((side) => {
-                    if (side.sti !== "*") {
-                        return (
-                            <a href={"/" + side.sti} key={side.sti}>{side.titel}</a>
+        <AppBar position="static" sx={{ backgroundColor: '#2c3e50' }}>
+            <Toolbar>
+                <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+                    <img src={Logo} alt="logo" style={{ height: '50px', marginRight: '10px' }} />
+                    <Button
+                        color="inherit"
+                        href={"tel:" + process.env.REACT_APP_TELEFON_NUMMER}
+                        sx={{ display: { xs: 'none', md: 'block' } }}
+                    >
+                        {process.env.REACT_APP_TELEFON_NUMMER}
+                    </Button>
+                </Box>
+                <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}>
+                    {mainLinks.map((side) => (
+                        side.sti !== "*" && (
+                            <Button
+                                key={side.sti}
+                                component={Link}
+                                to={"/" + side.sti}
+                                sx={{ color: 'white' }}
+                            >
+                                {side.titel}
+                            </Button>
                         )
-                    }
-                })}
-                <div className="dropdown">
-                    <a href="/tilbud">Tilbud</a>
-                    <div className="dropdown-content">
-                        {tilbudLinks.map((side) => (
-                            <a href={"/" + side.sti} key={side.sti}>{side.titel}</a>
+                    ))}
+                </Box>
+                <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <IconButton
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        onClick={handleMenuOpen}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Menu
+                        anchorEl={anchorEl}
+                        open={Boolean(anchorEl)}
+                        onClose={handleMenuClose}
+                        sx={{ display: { xs: 'block', md: 'none' } }}
+                    >
+                        {mainLinks.map((side) => (
+                            side.sti !== "*" && (
+                                <MenuItem
+                                    key={side.sti}
+                                    component={Link}
+                                    to={"/" + side.sti}
+                                    onClick={handleMenuClose}
+                                >
+                                    {side.titel}
+                                </MenuItem>
+                            )
                         ))}
-                    </div>
-                </div>
-            </div>
-            <div>
-                <a href={"tel:" + process.env.REACT_APP_TELEFON_NUMMER}>{process.env.REACT_APP_TELEFON_NUMMER}</a>
-            </div>
-        </div>
+                    </Menu>
+                </Box>
+            </Toolbar>
+        </AppBar>
     );
 }

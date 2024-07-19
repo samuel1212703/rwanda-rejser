@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 // Side-komponenter
 import Frontpage from './pages/Forside';
 import Kontakt from './pages/Kontakt';
@@ -19,31 +19,34 @@ export interface TilbudTyping {
     beskrivelse: string;
     billeder: Array<{ src: string, alt: string }>;
     komponent?: JSX.Element;
-}; export const tilbudData: TilbudTyping[] = [
+}
+
+export const tilbudData: TilbudTyping[] = [
     { 'sti': 'tilbud/safari', 'titel': 'Safaritur', 'langTitel': 'Guidet safari I Rwandas vilde natur', 'beskrivelse': 'Safaritur I Rwandas vilde natur', 'billeder': [{ 'alt': 'safari', 'src': tilbud1 }] },
     { 'sti': 'tilbud/cykel', 'titel': 'Cykeltur', 'langTitel': 'Cykeltur gennem Rwandas seje landskaber', 'beskrivelse': 'Safaritur I Rwandas vilde natur', 'billeder': [{ 'alt': 'safari', 'src': tilbud2 }] },
     { 'sti': 'tilbud/tre-uger', 'titel': 'Tre uger i Rwanda', 'langTitel': 'Tre fede uger i Rwanda', 'beskrivelse': 'Safaritur I Rwandas vilde natur', 'billeder': [{ 'alt': 'safari', 'src': tilbud3 }] },
-]; export const sider = [
+];
+
+export const sider = [
     { 'titel': 'Forside', 'sti': '', 'komponent': <Frontpage /> },
-    { 'titel': 'Tilbud', 'sti': 'tilbud', 'komponent': <Tilbud offerData={tilbudData} /> }, // Tilbud skal være nummer 2
+    { 'titel': 'Tilbud', 'sti': 'tilbud', 'komponent': <Tilbud offerData={tilbudData} /> },
     { 'titel': 'Overnatning', 'sti': 'overnatning', 'komponent': <Overnatning /> },
     { 'titel': 'Kontakt', 'sti': 'kontakt', 'komponent': <Kontakt /> },
     { 'titel': 'Blog', 'sti': 'blog', 'komponent': <Blog /> },
     { 'titel': 'Lidt om Rwanda', 'sti': 'om-rwanda', 'komponent': <OmRwanda /> },
     { 'titel': '', 'sti': '*', 'komponent': <IngenSide /> },
-]; tilbudData.forEach((tilbud, index) => {
+];
+
+tilbudData.forEach((tilbud, index) => {
     sider.push({ 'titel': tilbud.titel, 'sti': tilbud.sti, 'komponent': <Tilbud offerData={tilbudData[index]} /> });
 });
 
-
 export default function AppRouter() {
     return (
-        <BrowserRouter>
-            <Routes>
-                {sider.map((side, index) => (
-                    <Route key={index} path={"/" + side.sti} element={side.komponent} />
-                ))}
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            {sider.map((side, index) => (
+                <Route key={index} path={"/" + side.sti} element={side.komponent} />
+            ))}
+        </Routes>
     );
 }
