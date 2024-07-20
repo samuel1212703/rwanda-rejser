@@ -1,12 +1,15 @@
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import rwandaImage from '../images/rwanda.jpg';
+import { useTranslation } from 'react-i18next';
 
 const OmRwanda: React.FC = () => {
+    const { t } = useTranslation()
+
     return (
         <Container maxWidth="lg" sx={{ padding: '2rem 0' }}>
             <Typography variant="h4" component="h1" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
-                Om Rwanda
+                {t('omrwanda_overskrift')}
             </Typography>
             <Box
                 component="img"
@@ -21,13 +24,13 @@ const OmRwanda: React.FC = () => {
                 alt="Rwanda"
             />
             <Typography variant="body1" sx={{ marginBottom: '1rem' }}>
-                Rwanda, også kendt som "De tusind bakker land", er et land beliggende i Øst-Central Afrika. Det er kendt for sin fantastiske naturskønhed, herunder bjerge, søer og en rig biodiversitet med et væld af vilde dyr, herunder de berømte bjerggorillaer.
+                {t('omrwanda1')}
             </Typography>
             <Typography variant="body1" sx={{ marginBottom: '1rem' }}>
-                Hovedstaden Kigali er en af de reneste og mest sikre byer i Afrika. Rwanda har en rig kulturarv og en befolkning kendt for deres gæstfrihed og venlighed.
+                {t('omrwanda2')}
             </Typography>
             <Typography variant="body1" sx={{ marginBottom: '1rem' }}>
-                Landet har overvundet en tumultarisk fortid og har oplevet en bemærkelsesværdig genopretning og økonomisk vækst. I dag er Rwanda en fremtrædende destination for turister, der søger eventyr, afslapning og kulturel fordybelse.
+                {t('omrwanda3')}
             </Typography>
         </Container>
     );

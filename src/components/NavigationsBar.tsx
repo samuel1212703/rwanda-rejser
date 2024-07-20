@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../images/logo.png';
-import { sider } from '../AppRouter';
 import { Link } from 'react-router-dom';
+import LanguageSwitcher from '../components/LanguageSwitcher';
+import { SideInfo } from '../types';
 
-export default function NavigationsBar() {
+export default function NavigationsBar(sider: SideInfo[]) {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
     const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -44,8 +45,10 @@ export default function NavigationsBar() {
                             </Button>
                         )
                     ))}
+                    <LanguageSwitcher />
                 </Box>
                 <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <LanguageSwitcher />
                     <IconButton
                         edge="start"
                         color="inherit"

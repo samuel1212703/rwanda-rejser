@@ -1,11 +1,14 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 interface ForsideProps {
     forsideBillede: string;
 }
 
 const ForsideBillede: React.FC<ForsideProps> = ({ forsideBillede }) => {
+    const { t } = useTranslation();
+
     return (
         <Box
             sx={{
@@ -39,7 +42,7 @@ const ForsideBillede: React.FC<ForsideProps> = ({ forsideBillede }) => {
                         letterSpacing: '0.1em',
                     }}
                 >
-                    Rejser til Rwanda
+                    {t('forside_velkomst')}
                 </Typography>
                 <Typography
                     variant="h5"
@@ -49,7 +52,7 @@ const ForsideBillede: React.FC<ForsideProps> = ({ forsideBillede }) => {
                         marginBottom: '20px',
                     }}
                 >
-                    Er du klar til et eventyr?
+                    {t('forside_velkomst_undertitel')}
                 </Typography>
             </Box>
         </Box>

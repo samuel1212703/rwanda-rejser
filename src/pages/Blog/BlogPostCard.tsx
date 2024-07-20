@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, CardActionArea } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import { BlogPost } from './types';
 
 interface BlogPostCardProps {
@@ -9,7 +9,7 @@ interface BlogPostCardProps {
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onClick }) => {
     return (
-        <Card sx={{ maxWidth: 345, margin: '20px' }}>
+        <Card>
             <CardActionArea onClick={onClick}>
                 <CardMedia
                     component="img"
@@ -21,7 +21,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onClick }) => {
                     <Typography gutterBottom variant="h5" component="div">
                         {post.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="textSecondary" component="p">
                         {post.summary}
                     </Typography>
                 </CardContent>

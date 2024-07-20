@@ -1,0 +1,27 @@
+.baggrund {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #252e26;
+    background-image: radial-gradient(circle at 10% 20%, rgba(34, 139, 34, 0.3), transparent 20%),
+        radial-gradient(circle at 40% 80%, rgba(0, 100, 0, 0.3), transparent 20%),
+        radial-gradient(circle at 70% 30%, rgba(46, 139, 87, 0.3), transparent 20%),
+        radial-gradient(circle at 90% 90%, rgba(60, 179, 113, 0.3), transparent 20%);
+    background-size: 200px 200px;
+}
+
+.baggrund::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 20%, rgba(34, 139, 34, 0.1), transparent 20%),
+        radial-gradient(circle at 40% 80%, rgba(0, 100, 0, 0.1), transparent 20%),
+        radial-gradient(circle at 70% 30%, rgba(46, 139, 87, 0.1), transparent 20%),
+        radial-gradient(circle at 90% 90%, rgba(60, 179, 113, 0.1), transparent 20%);
+    background-size: 200px 200px;
+    opacity: 0.6;
+    pointer-events: none;
+}

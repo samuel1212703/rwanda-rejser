@@ -1,3 +1,21 @@
 .App {
   text-align: center;
 }
+
+.MuiAccordion-root {
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.MuiAccordionSummary-root {
+  background-color: #f5f5f5;
+}
+
+.MuiAccordionSummary-expandIconWrapper {
+  color: #1976d2;
+}
+
+.MuiAccordionDetails-root {
+  background-color: #fafafa;
+}

@@ -1,6 +1,9 @@
 import { Box, Typography, Link, Container, Grid } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+    const { t } = useTranslation()
+
     return (
         <Box
             component="footer"
@@ -15,7 +18,7 @@ export default function Footer() {
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={4}>
                         <Typography variant="h6" gutterBottom>
-                            Kontaktinformation
+                            {t('footer_oveskrift')}
                         </Typography>
                         <Typography variant="body1">
                             Patrick Illunga
@@ -27,12 +30,12 @@ export default function Footer() {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Typography variant="h6" gutterBottom>
-                            Andre Kontaktinformationer
+                            {t('footer_oveskrift2')}
                         </Typography>
                         <Typography variant="body1">
-                            Rwanda Travels
+                            {t('virksomhedsnavn')}
                             <br />
-                            Kigalicenteret, Rwanda
+                            {t('virksomhedsadresse')}
                             <br />
                             tlf: <Link href="tel:+250789456123" color="inherit" underline="hover">(+250) 789456123</Link>
                             <br />
@@ -41,7 +44,7 @@ export default function Footer() {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Typography variant="h6" gutterBottom>
-                            Følg os
+                            {t('footer_so_me_oveskrift')}
                         </Typography>
                         <Typography variant="body1">
                             <Link href="#" color="inherit" underline="hover" sx={{ marginRight: '0.5rem' }}>Facebook</Link>
@@ -52,7 +55,7 @@ export default function Footer() {
                 </Grid>
                 <Box sx={{ textAlign: 'center', marginTop: '2rem' }}>
                     <Typography variant="body2" color="textSecondary">
-                        &copy; {new Date().getFullYear()} Rwanda Travels. All rights reserved.
+                        &copy; {new Date().getFullYear()} {t('virksomhedsnavn')}. {t('footer_rettigheder')}.
                     </Typography>
                 </Box>
             </Container>
