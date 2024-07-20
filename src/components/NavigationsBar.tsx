@@ -45,10 +45,9 @@ export default function NavigationsBar(sider: SideInfo[]) {
                             </Button>
                         )
                     ))}
-                    <LanguageSwitcher />
                 </Box>
-                <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                    <LanguageSwitcher />
+                <LanguageSwitcher />
+                <Box sx={{ display: { xs: 'flex', md: 'none' }, marginLeft: '25px' }}>
                     <IconButton
                         edge="start"
                         color="inherit"
