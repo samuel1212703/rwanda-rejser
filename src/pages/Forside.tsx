@@ -12,9 +12,9 @@ export default function Frontpage() {
     const { i18n, t } = useTranslation();
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#605637', color: 'white'}}>
             <ForsideBillede forsideBillede={IntroBillede}></ForsideBillede>
-            <Container maxWidth="lg" sx={{ padding: '2rem 0' }}>
+            <Container maxWidth="xl" sx={{ padding: '2rem 0' }}>
                 <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
                     {t('rejsepakker_overskrift')}
                 </Typography>
@@ -22,13 +22,13 @@ export default function Frontpage() {
                     {Rejsetilbud(getOffers(i18n.language))}
                 </Box>
             </Container>
+            <ForsideInformation />
             <Container maxWidth="lg" sx={{ padding: '2rem 0' }}>
                 <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
                     {t('trustpilot_overskrift')}
                 </Typography>
                 <TrustpilotReviews />
             </Container>
-            <ForsideInformation />
         </div>
     );
 }

@@ -13,11 +13,20 @@ import Tilbud from './pages/Tilbud';
 import { useTranslation } from 'react-i18next';
 import getOffers from './tilbudData';
 import { SideInfo } from './types';
+import { Suspense, useEffect, useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
 
 export default function App() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const tilbud = getOffers(currentLang);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    i18n.on('loaded', () => {
+      setIsLoading(false);
+    });
+  }, [i18n]);
 
   const sider: SideInfo[] = [
     { 'titel': t('forside_navn'), 'sti': '', 'komponent': <Frontpage /> },
@@ -36,8 +45,10 @@ export default function App() {
   return (
     <div className='App'>
       <header>{NavigationsBar(sider)}</header>
-      {AppRouter(sider)}
+      <Suspense fallback={<LoadingSpinner />}>
+        {isLoading ? <LoadingSpinner /> : AppRouter(sider)}
+      </Suspense>
       <footer>{Footer()}</footer>
     </div>
-  );
+  );//
 }

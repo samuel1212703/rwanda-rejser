@@ -13,7 +13,7 @@ const Rejsetilbud: React.FC<TilbudTyping[]> = (tilbud) => {
             <Grid container spacing={4}>
                 {tilbud.map((t, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
-                        <a href={t.sti}>
+                        <a href={t.sti} style={{textDecoration: 'none'}}>
                             <Card sx={{
                                 width: '100%', padding: '1.5%', boxShadow: 4, borderRadius: 2, transition: 'transform 0.3s', '&:hover': {
                                     transform: 'scale(1.05)', borderRadius: 1
@@ -23,7 +23,7 @@ const Rejsetilbud: React.FC<TilbudTyping[]> = (tilbud) => {
                                     component="img"
                                     image={t.billeder[0]['src']}
                                     alt={t.billeder[0]['alt']}
-                                    sx={{ objectFit: 'cover', height: { xs: '40vh', sm: '50vh', md: '60vh', lg: '70vh' } }}
+                                    sx={{ objectFit: 'cover', height: { xs: '40vh', sm: '50vh', md: '60vh', lg: '60vh' } }}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Select, { SingleValue, components } from 'react-select';
+import Select, { SingleValue } from 'react-select';
 import { useTranslation } from 'react-i18next';
 
 // Flags
@@ -9,7 +9,6 @@ import gb from '../images/flags/gb.svg';
 // Define a type for the options
 interface OptionType {
     value: string;
-    label: string;
     icon: JSX.Element; // Assuming you have SVGs or image elements for icons
 }
 
@@ -17,12 +16,10 @@ interface OptionType {
 const options: OptionType[] = [
     {
         value: 'da',
-        label: 'Dansk',
         icon: <img src={dk} alt="Dansk" style={{ width: 36, height: 36 }} />
     },
     {
         value: 'en',
-        label: 'English',
         icon: <img src={gb} alt="English" style={{ width: 36, height: 36 }} />
     },
 ];
@@ -57,12 +54,6 @@ const LanguageSwitcher: React.FC = () => {
                         zIndex: 9999 // Ensure dropdown is above other elements
                     }),
                     option: (provided) => ({
-                        ...provided,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    }),
-                    singleValue: (provided) => ({
                         ...provided,
                         display: 'flex',
                         alignItems: 'center',

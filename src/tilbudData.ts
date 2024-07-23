@@ -6,7 +6,7 @@ import tilbud3 from './images/t3.jpg';
 const tilbudDataDa: TilbudTyping[] = [
     {
         'sti': 'tilbud/lille-pakkerejse',
-        'titel': 'Den lille pakkerejse til Rwanda',
+        'titel': 'Den Lille Pakkerejse',
         'langTitel': 'Den lille pakkerejse til Rwanda',
         'beskrivelse': 'Safaritur I Rwandas vilde natur',
         'billeder': [{ 'alt': 'safari', 'src': tilbud1 }],

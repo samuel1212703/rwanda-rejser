@@ -14,7 +14,7 @@ const ForsideBillede: React.FC<ForsideProps> = ({ forsideBillede }) => {
             sx={{
                 position: 'relative',
                 width: '100%',
-                height: { xs: '70vh', sm: '70vh', md: '80vh', lg: '90vh' },
+                height: { xs: '60vh', sm: '65vh', md: '70vh', lg: '80vh' },
                 overflow: 'hidden',
                 background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(${forsideBillede})`,
                 backgroundSize: 'cover',

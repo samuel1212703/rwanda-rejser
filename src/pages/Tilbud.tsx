@@ -30,7 +30,7 @@ const Tilbud: React.FC<TilbudProps> = ({ tilbudData }) => {
                     <Grid container spacing={4}>
                         {tilbudData.map((tilbud, index) => (
                             <Grid item xs={12} md={4} key={index}>
-                                <a href={tilbud.sti}>
+                                <a href={tilbud.sti} style={{textDecoration: 'none'}}>
                                     <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
                                         <CardMedia
                                             component="img"
