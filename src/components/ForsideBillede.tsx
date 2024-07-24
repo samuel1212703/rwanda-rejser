@@ -16,7 +16,7 @@ const ForsideBillede: React.FC<ForsideProps> = ({ forsideBillede }) => {
                 width: '100%',
                 height: { xs: '60vh', sm: '65vh', md: '70vh', lg: '80vh' },
                 overflow: 'hidden',
-                background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(${forsideBillede})`,
+                background: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(${forsideBillede})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',

@@ -26,7 +26,7 @@ export default function ForsideInformation() {
                     zIndex: 1,
                 }}
             />
-            <Container sx={{ maxWidth: 'sm', position: 'relative', zIndex: 2 }}>
+            <Container sx={{ position: 'relative', zIndex: 2, width: '50%' }}>
                 <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
                     Om Rwanda
                 </Typography>

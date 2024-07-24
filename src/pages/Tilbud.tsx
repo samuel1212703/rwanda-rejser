@@ -4,6 +4,7 @@ import { TilbudTyping } from '../types';
 import { TilbudPakke } from './TilbudPakke';
 import './tilbud.css'
 import { useTranslation } from 'react-i18next';
+import { TilbudCard } from '../components/tilbud/TilbudCard';
 
 interface TilbudProps {
     tilbudData: TilbudTyping[] | TilbudTyping;
@@ -23,36 +24,20 @@ const Tilbud: React.FC<TilbudProps> = ({ tilbudData }) => {
                     <TilbudPakke tilbud={tilbudData}></TilbudPakke>
                 </div>
             ) : (
-                <>
-                    <Typography variant="h4" component="h1" sx={{ marginBottom: 2 }}>
+                <div style={{margin: 48}}>
+                    <Typography variant="h3" component="h1" sx={{ marginBottom: 4 }}>
                         {t('tilbud_overskrift')}
                     </Typography>
                     <Grid container spacing={4}>
                         {tilbudData.map((tilbud, index) => (
-                            <Grid item xs={12} md={4} key={index}>
+                            <Grid item xs={12} md={12} key={index}>
                                 <a href={tilbud.sti} style={{textDecoration: 'none'}}>
-                                    <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
-                                        <CardMedia
-                                            component="img"
-                                            height="300"
-                                            image={tilbud.billeder[0]?.src || 'default-image.jpg'}
-                                            alt={tilbud.billeder[0]?.alt || 'Offer Image'}
-                                            sx={{ objectFit: 'cover' }}
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                {tilbud.titel}
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                {tilbud.beskrivelse}
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
+                                    <TilbudCard tilbud={tilbud} />
                                 </a>
                             </Grid>
                         ))}
                     </Grid>
-                </>
+                </div>
             )}
         </Box>
     );

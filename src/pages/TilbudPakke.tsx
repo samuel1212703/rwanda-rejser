@@ -22,9 +22,9 @@ export const TilbudPakke: React.FC<TilbudProps> = ({ tilbud }) => {
                 {tilbud.beskrivelse}
             </Typography>
             {tilbud.dagPlan && (
-                <Box sx={{ width: widthBreakpoints, margin: '0 auto', marginTop: 4,  backgroundColor: "#483544", padding: 2 }}>
+                <Box sx={{ width: widthBreakpoints, margin: '0 auto', marginTop: 4,  backgroundColor: "#483544", padding: 2, color: 'white' }}>
                     <Typography variant="h5" component="h2" sx={{ marginBottom: 2 }}>
-                        {t('dagsplan_overskrift')}
+                        <b>{t('dagsplan_overskrift')}</b>
                     </Typography>
                     <Grid container spacing={2}>
                         {tilbud.dagPlan.map((dag, index) => (

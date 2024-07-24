@@ -13,11 +13,12 @@ export default function Frontpage() {
 
     return (
         <div style={{ backgroundColor: '#605637', color: 'white'}}>
-            <ForsideBillede forsideBillede={IntroBillede}></ForsideBillede>
+            <ForsideBillede forsideBillede={IntroBillede} />
             <Container maxWidth="xl" sx={{ padding: '2rem 0' }}>
                 <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
                     {t('rejsepakker_overskrift')}
                 </Typography>
+                <hr style={{border: '1px solid white'}}></hr>
                 <Box sx={{ marginBottom: '2rem' }}>
                     {Rejsetilbud(getOffers(i18n.language))}
                 </Box>
