@@ -1,27 +1,27 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material"
-import { TilbudTyping } from "../../types"
+import { OfferTyping } from "../../types"
 
 
-interface TilbudCardProps {
-    tilbud: TilbudTyping
+interface OfferCardProps {
+    offer: OfferTyping
 }
 
-export const TilbudCard: React.FC<TilbudCardProps> = ({ tilbud }) => {
+export const OfferCard: React.FC<OfferCardProps> = ({ offer }) => {
     return (
         <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
             <CardMedia
                 component="img"
                 height="300"
-                image={tilbud.billeder[0]?.src || 'default-image.jpg'}
-                alt={tilbud.billeder[0]?.alt || 'Offer Image'}
+                image={offer.images[0]?.src || 'default-image.jpg'}
+                alt={offer.images[0]?.alt || 'Offer Image'}
                 sx={{ objectFit: 'cover' }}
             />
             <CardContent>
                 <Typography gutterBottom variant="h4" component="div">
-                    {tilbud.titel}
+                    {offer.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {tilbud.beskrivelse}
+                    {offer.description}
                 </Typography>
             </CardContent>
         </Card>

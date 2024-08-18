@@ -1,7 +1,7 @@
-export interface SideInfo {
-    titel: string,
-    sti: string,
-    komponent: JSX.Element
+export interface PageInfo {
+    title: string,
+    path: string,
+    component: JSX.Element
 }
 export interface BlogPost {
     id: number;
@@ -13,12 +13,12 @@ export interface BlogPost {
     image: string;
 }
 
-export interface TilbudTyping {
-    sti: string;
-    langTitel: string;
-    titel: string;
-    beskrivelse: string;
-    billeder: Array<{ src: string, alt: string }>;
-    komponent?: JSX.Element;
-    dagPlan?: Array<{ overskrift: string, beskrivelse: string }>;
+export interface OfferTyping {
+    path: string;
+    longTitle: string;
+    title: string;
+    description: string;
+    images: Array<{ src: string, alt: string }>;
+    component?: JSX.Element;
+    dayPlan?: Array<{ title: string, description: string }>;
 }

@@ -9,10 +9,7 @@ i18n
   .use(LanguageDetector) // detects user language
   .use(initReactI18next) // initializes i18next with React
   .init({
-    fallbackLng: 'da', // default language if detection fails
-    interpolation: {
-      escapeValue: false, // not needed for React as it escapes by default
-    },
+    fallbackLng: 'en', // default language if detection fails
     react: {
       useSuspense: false, // set to true if you use Suspense for loading translations
     },

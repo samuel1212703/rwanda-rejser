@@ -1,16 +1,41 @@
 {
-  "flag_sti": "../images/flags/gb.svg",
-  "virksomhedsnavn": "Rwanda Travels",
-  "virksomhedsadresse": "Kigalicenteret, Rwanda",
-  "forside_navn": "Frontpage",
-  "tilbud_side_navn": "Offers",
-  "om_os_side_navn": "About us",
-  "kontakt_side_navn": "Contact",
-  "blog_side_navn": "Blog",
-  "rwanda_info_side_navn": "Rwanda Info",
-  "forside_velkomst": "Travel to Rwanda",
-  "forside_velkomst_undertitel": "Ready for an adventure?",
-  "rejsepakker_overskrift": "Our Offers",
-  "trustpilot_overskrift": "Trustpilot",
-  "billedkarrusel_guide": "Swipe to see more"
+  "companyName": "Rwanda Travels",
+  "companyAddress": "Kigalicenter, Rwanda",
+  "pageNames": {
+    "about": "About us",
+    "contact": "Contact",
+    "blog": "Blog",
+    "rwanda": "Rwanda Info"
+  },
+  "frontpage": {
+    "name": "Frontpage",
+    "welcomeTitle": "Discover Rwanda",
+    "welcomeSubtitle": "Ready for an adventure?"
+  },
+  "offers": {
+    "name": "Offers",
+    "title": "Our Offers"
+  },
+  "offer": {
+    "imageCarouselText": "Swipe to see more"
+  },
+  "about": {
+    "name": "About us",
+    "ourValuesData": [{"title": "Integrity", "text": ""}, {"title": "Flexibility", "text": ""}, {"title": "Respecting the Journey", "text": ""}, {"title": "Trust", "text": ""}, {"title": "Transparens", "text": ""}]
+  },
+  "contact": {
+    "name": "Contact"
+  },
+  "blog": {
+    "name": "Blog"
+  },
+  "rwanda": {
+    "name": "Rwanda"
+  },
+  "aboutRwandaText": [],
+  "footer": {
+    "title": "Contactinformation",
+    "title2": "All rights reserved 2024",
+    "socialMediaTitle": "Follow us"
+  }
 }

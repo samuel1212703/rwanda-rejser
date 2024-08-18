@@ -9,7 +9,7 @@ const OmRwanda: React.FC = () => {
     return (
         <Container maxWidth="lg" sx={{ padding: '2rem 0' }}>
             <Typography variant="h4" component="h1" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
-                {t('omrwanda_overskrift')}
+                {t('rwanda.title')}
             </Typography>
             <Box
                 component="img"

@@ -18,7 +18,7 @@ export default function Footer() {
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={4}>
                         <Typography variant="h6" gutterBottom>
-                            {t('footer_oveskrift')}
+                            {t('footer.title')}
                         </Typography>
                         <Typography variant="body1">
                             Patrick Illunga
@@ -30,12 +30,12 @@ export default function Footer() {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Typography variant="h6" gutterBottom>
-                            {t('footer_oveskrift2')}
+                            {t('footer.title2')}
                         </Typography>
                         <Typography variant="body1">
-                            {t('virksomhedsnavn')}
+                            {t('companyName')}
                             <br />
-                            {t('virksomhedsadresse')}
+                            {t('companyAddress')}
                             <br />
                             tlf: <Link href="tel:+250789456123" color="inherit" underline="hover">(+250) 789456123</Link>
                             <br />
@@ -44,7 +44,7 @@ export default function Footer() {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Typography variant="h6" gutterBottom>
-                            {t('footer_so_me_oveskrift')}
+                            {t('footer.socialMediaTitle')}
                         </Typography>
                         <Typography variant="body1">
                             <Link href="#" color="inherit" underline="hover" sx={{ marginRight: '0.5rem' }}>Facebook</Link>
@@ -55,7 +55,7 @@ export default function Footer() {
                 </Grid>
                 <Box sx={{ textAlign: 'center', marginTop: '2rem' }}>
                     <Typography variant="body2" color="textSecondary">
-                        &copy; {new Date().getFullYear()} {t('virksomhedsnavn')}. {t('footer_rettigheder')}.
+                        &copy; {new Date().getFullYear()} {t('companyName')}. {t('footer_rettigheder')}.
                     </Typography>
                 </Box>
             </Container>
