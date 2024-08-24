@@ -1,14 +1,15 @@
-import { Box, Typography, Link, Container, Grid } from '@mui/material';
+import { Box, Typography, Link, Container, Grid, useTheme } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
     const { t } = useTranslation()
+    const theme = useTheme()
 
     return (
         <Box
             component="footer"
             sx={{
-                backgroundColor: '#2c3e50',
+                backgroundColor: theme.palette.secondary.main,
                 color: 'white',
                 padding: '2rem 0',
                 marginTop: '2rem'

@@ -1,9 +1,10 @@
-import { Box, Typography, Button, Container } from "@mui/material";
+import { Box, Typography, Button, Container, useTheme } from "@mui/material";
 import { Link } from 'react-router-dom';
 import backgroundImage from '../images/rwanda2.jpg';
 import Fade from '@mui/material/Fade';
 
 export default function FrontpageRwandaInfo() {
+    const theme = useTheme()
     return (
         <Box
             sx={{
@@ -49,13 +50,13 @@ export default function FrontpageRwandaInfo() {
                 </Fade>
                 <Button
                     variant="contained"
-                    color="primary"
+                    color="warning"
                     component={Link}
-                    to="/om-rwanda"
+                    to="/rwanda"
                     sx={{
                         marginTop: '2rem',
-                        backgroundColor: '#ff9800',
-                        '&:hover': { backgroundColor: '#e68900', transform: 'scale(1.05)' },
+                        backgroundColor: theme.palette.accent.main,
+                        '&:hover': { backgroundColor: theme.palette.accent.dark, transform: 'scale(1.05)' },
                         padding: '10px 20px',
                         fontSize: '1rem',
                         fontWeight: 'bold',

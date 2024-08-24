@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Box } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Box, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
 import { PageInfo } from '../types';
 
 export default function NavigationBar(sider: PageInfo[]) {
+    const theme = useTheme();
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
     const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -20,11 +21,10 @@ export default function NavigationBar(sider: PageInfo[]) {
 
     return (
         <div>
-            <AppBar><Toolbar></Toolbar></AppBar>
-            <AppBar position="static" sx={{ backgroundColor: '#2c3e50' }}>
-                <Toolbar>
-                    <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                        <img src={Logo} alt="logo" style={{ height: '50px', marginRight: '10px' }} />
+            <AppBar color="primary" position="static">
+                <Toolbar variant='dense' sx={{ backgroundColor: theme.palette.accent.main }}>
+                    <div style={{display: 'flex'}}>
+                    <Box>
                         <Button
                             color="inherit"
                             href={"tel:" + process.env.REACT_APP_TELEFON_NUMMER}
@@ -32,6 +32,15 @@ export default function NavigationBar(sider: PageInfo[]) {
                         >
                             {process.env.REACT_APP_TELEFON_NUMMER}
                         </Button>
+                    </Box>
+                    <Box>
+
+                    </Box>
+                    </div>
+                </Toolbar>
+                <Toolbar sx={{ backgroundColor: theme.palette.secondary.main }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+                        <img src={Logo} alt="logo" style={{ height: '50px', marginRight: '10px' }} />
                     </Box>
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1 }}>
                         {mainLinks.map((side) => (

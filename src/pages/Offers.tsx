@@ -3,7 +3,6 @@ import { Box, Typography, Grid } from '@mui/material';
 import { OfferTyping } from '../types';
 import { Offer } from './Offer';
 import { OfferCard } from '../components/offer/Card';
-import './Offers.css'
 import { useTranslation } from 'react-i18next';
 
 
@@ -27,7 +26,7 @@ const Offers: React.FC<OfferProps> = ({ offerData }) => {
             ) : (
                 <div style={{margin: 48}}>
                     <Typography variant="h3" component="h1" sx={{ marginBottom: 4 }}>
-                        {t('offer.title')}
+                        {t('offers.title')}
                     </Typography>
                     <Grid container spacing={4}>
                         {offerData.map((offer, index) => (
