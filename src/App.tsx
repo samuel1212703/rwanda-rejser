@@ -15,8 +15,10 @@ import getOffers from './offerData';
 import { OfferTyping, PageInfo } from './types';
 import { Suspense, useEffect, useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
+import { useTheme } from '@mui/material';
 
 export default function App() {
+  const theme = useTheme()
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const offer: OfferTyping[] = getOffers(currentLang);
@@ -43,7 +45,7 @@ export default function App() {
   });
 
   return (
-    <div className='App'>
+    <div className='App' style={{backgroundColor: theme.palette.background.default}}>
       <header>{NavigationBar(sider)}</header>
       <Suspense fallback={<LoadingSpinner />}>
         {isLoading ? <LoadingSpinner /> : AppRouter(sider)}

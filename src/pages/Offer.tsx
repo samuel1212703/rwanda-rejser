@@ -15,7 +15,7 @@ export const Offer: React.FC<OfferProps> = ({ offer }) => {
     return (
         <Box sx={{ width: widthBreakpoints, boxShadow: '2px 5px 150px black', margin: '0 auto', padding: '20px', backgroundColor: 'white' }}>
             <ImageCarrousel images={offer.images} />
-            <Typography variant="h4" component="h1" sx={{ marginBottom: 2 }}>
+            <Typography variant="h4" component="h1" sx={{ marginBottom: 2, fontWeight: 'bold'}}>
                 {offer.title}
             </Typography>
             <Typography variant="body1" component="p" sx={{ marginBottom: 4 }}>

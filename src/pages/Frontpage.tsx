@@ -13,7 +13,7 @@ export default function Frontpage() {
     const { i18n, t } = useTranslation();
 
     return (
-        <div style={{ backgroundColor: '#363247', color: 'white'}}>
+        <div style={{color: 'white'}}>
             <FrontpageImage frontpageImage={IntroImage} />
             <Container maxWidth="xl" sx={{ padding: '2rem 0' }}>
                 <Fade in timeout={1000}>

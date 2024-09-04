@@ -28,7 +28,7 @@ const theme = createTheme({
       main: '#F4A261', // Golden Yellow - Reflects the warmth and hospitality
     },
     background: {
-      default: '#E9C46A', // Warm Beige - Neutral tone for backgrounds
+      default: '#363247', // Warm Beige - Neutral tone for backgrounds
       paper: '#FFFFFF', // White - For cards and paper elements
     },
     text: {
@@ -36,7 +36,6 @@ const theme = createTheme({
       secondary: '#FFFFFF', // White - For text on dark backgrounds
     },
   },
-  // Add other component customizations if needed...
 });
 
 const root = ReactDOM.createRoot(
