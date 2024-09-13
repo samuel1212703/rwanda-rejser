@@ -16,12 +16,12 @@ const isOfferArray = (data: OfferTyping | OfferTyping[]): data is OfferTyping[] 
 const Offers: React.FC<OfferProps> = ({ offerData }) => {
     const { t } = useTranslation();
     const theme = useTheme();
-    const [selectedOffer, setSelectedOffer] = useState<OfferTyping | null>(
-        isOfferArray(offerData) ? offerData[0] : offerData
-    );
-    const handleOfferClick = (offer: OfferTyping) => {
-        setSelectedOffer(offer);
-    };
+    // const [selectedOffer, setSelectedOffer] = useState<OfferTyping | null>(
+    //     isOfferArray(offerData) ? offerData[0] : offerData
+    // );
+    // const handleOfferClick = (offer: OfferTyping) => {
+    //     setSelectedOffer(offer);
+    // };
 
     return (
         <Box>
@@ -34,12 +34,12 @@ const Offers: React.FC<OfferProps> = ({ offerData }) => {
                         {offerData.map((offer, index) => (
                             <Grid item sm={6} md={4} key={index}>
                                 <Box
-                                    onClick={() => handleOfferClick(offer)}
-                                    sx={{
-                                        cursor: 'pointer',
-                                        border: selectedOffer === offer ? '2px solid #3f51b5' : '2px solid transparent',
-                                        borderRadius: '8px',
-                                    }}
+                                    // onClick={() => handleOfferClick(offer)}
+                                    // sx={{
+                                    //     cursor: 'pointer',
+                                    //     border: selectedOffer === offer ? '2px solid #3f51b5' : '2px solid transparent',
+                                    //     borderRadius: '8px',
+                                    // }}
                                 >
                                     <OfferCard offer={offer} />
                                 </Box>
@@ -53,14 +53,14 @@ const Offers: React.FC<OfferProps> = ({ offerData }) => {
                 </div>
             )}
 
-            {selectedOffer && (
+            {/* {selectedOffer && (
                 <Box sx={{ marginTop: 3, padding: 4, backgroundColor: theme.palette.common.white, borderRadius: '8px' }}>
                     <Typography variant="h4" component="h2" sx={{ marginBottom: 4 }}>
                         {selectedOffer.title}
                     </Typography>
                     <Offer offer={selectedOffer} />
                 </Box>
-            )}
+            )} */}
         </Box>
     );
 }

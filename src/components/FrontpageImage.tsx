@@ -1,5 +1,4 @@
-import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 interface ForsideProps {
@@ -14,7 +13,7 @@ const FrontpageImage: React.FC<ForsideProps> = ({ frontpageImage }) => {
             sx={{
                 position: 'relative',
                 width: '100%',
-                height: { xs: '60vh', sm: '65vh', md: '70vh', lg: '80vh' },
+                height: { xs: '60vh', sm: '65vh', md: '70vh', lg: '80vh' }, // Consistent height for all screens
                 overflow: 'hidden',
                 background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(${frontpageImage})`,
                 backgroundSize: 'cover',
@@ -23,19 +22,9 @@ const FrontpageImage: React.FC<ForsideProps> = ({ frontpageImage }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 color: 'white',
-                '&:hover': {
-                    '&:before': {
-                        content: '""',
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                        zIndex: 1,
-                    },
-                },
                 transition: 'all 0.5s ease',
+                padding: { xs: '10px', sm: '15px' }, // Add padding to avoid cramped content
+                boxSizing: 'border-box', // Ensures padding doesn't affect container size
             }}
         >
             <Box
@@ -43,7 +32,11 @@ const FrontpageImage: React.FC<ForsideProps> = ({ frontpageImage }) => {
                     textAlign: 'center',
                     zIndex: 2,
                     padding: { xs: '10px', sm: '15px' },
-                    animation: 'fadeIn 3s',
+                    width: '100%', // Ensure it stretches full width
+                    height: '100%', // Ensure it stretches full height
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center', // Center content vertically
                 }}
             >
                 <Typography
@@ -55,7 +48,6 @@ const FrontpageImage: React.FC<ForsideProps> = ({ frontpageImage }) => {
                         fontSize: { xs: '2rem', sm: '3rem', md: '4rem', lg: '5rem' },
                         letterSpacing: '0.1em',
                         textTransform: 'uppercase',
-                        animation: 'slideInFromLeft 1s ease-in-out',
                     }}
                 >
                     {t('frontpage.welcomeTitle')}
@@ -66,7 +58,6 @@ const FrontpageImage: React.FC<ForsideProps> = ({ frontpageImage }) => {
                     sx={{
                         fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem', lg: '2rem' },
                         marginBottom: '20px',
-                        animation: 'slideInFromRight 1s ease-in-out',
                     }}
                 >
                     {t('frontpage.welcomeSubtitle')}
