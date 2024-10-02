@@ -1,12 +1,6 @@
 {
   "companyName": "Rwanda Travels",
   "companyAddress": "Kigalicenter, Rwanda",
-  "pageNames": {
-    "about": "About us",
-    "contact": "Contact",
-    "blog": "Blog",
-    "rwanda": "Rwanda Info"
-  },
   "frontpage": {
     "name": "Frontpage",
     "welcomeTitle": "Discover Rwanda",
@@ -51,10 +45,11 @@
     "name": "Blog"
   },
   "rwanda": {
+    "name": "Rwanda",
     "title": "About Rwanda",
-    "omrwanda1": "Rwanda, often referred to as the 'Land of a Thousand Hills,' is a country of stunning natural beauty. Nestled in the heart of Africa, Rwanda boasts lush green landscapes, majestic mountains, and serene lakes. This small yet diverse nation is known for its rich biodiversity, including the iconic mountain gorillas, which attract visitors from all over the world.",
-    "omrwanda2": "Beyond its natural beauty, Rwanda has a deep and complex history. The country has made remarkable strides in unity and reconciliation since the tragic events of 1994, emerging as a symbol of hope and resilience. Today, Rwanda is recognized for its safety, cleanliness, and rapid development, making it one of the most progressive nations in Africa.",
-    "omrwanda3": "Rwanda's vibrant culture is another highlight for visitors. The country is home to a mix of traditional and contemporary arts, music, and dance. The Rwandan people, known for their warmth and hospitality, take great pride in their cultural heritage. Whether you're exploring the bustling capital city of Kigali or visiting rural villages, Rwanda offers a unique and enriching travel experience."
+    "about1": "Rwanda, often referred to as the 'Land of a Thousand Hills,' is a country of stunning natural beauty. Nestled in the heart of Africa, Rwanda boasts lush green landscapes, majestic mountains, and serene lakes. This small yet diverse nation is known for its rich biodiversity, including the iconic mountain gorillas, which attract visitors from all over the world.",
+    "about2": "Beyond its natural beauty, Rwanda has a deep and complex history. The country has made remarkable strides in unity and reconciliation since the tragic events of 1994, emerging as a symbol of hope and resilience. Today, Rwanda is recognized for its safety, cleanliness, and rapid development, making it one of the most progressive nations in Africa.",
+    "about3": "Rwanda's vibrant culture is another highlight for visitors. The country is home to a mix of traditional and contemporary arts, music, and dance. The Rwandan people, known for their warmth and hospitality, take great pride in their cultural heritage. Whether you're exploring the bustling capital city of Kigali or visiting rural villages, Rwanda offers a unique and enriching travel experience."
   },
   "aboutRwandaText": [],
   "footer": {

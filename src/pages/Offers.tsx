@@ -4,6 +4,7 @@ import { OfferTyping } from '../types';
 import { Offer } from './Offer';
 import { OfferCard } from '../components/offer/Card';
 import { useTranslation } from 'react-i18next';
+import { redirect } from 'react-router-dom';
 
 interface OfferProps {
     offerData: OfferTyping[] | OfferTyping;
@@ -19,9 +20,10 @@ const Offers: React.FC<OfferProps> = ({ offerData }) => {
     // const [selectedOffer, setSelectedOffer] = useState<OfferTyping | null>(
     //     isOfferArray(offerData) ? offerData[0] : offerData
     // );
-    // const handleOfferClick = (offer: OfferTyping) => {
-    //     setSelectedOffer(offer);
-    // };
+    const handleOfferClick = (offerPath: string) => {
+        redirect(offerPath)
+        //setSelectedOffer(offer);
+    };
 
     return (
         <Box>
@@ -34,7 +36,7 @@ const Offers: React.FC<OfferProps> = ({ offerData }) => {
                         {offerData.map((offer, index) => (
                             <Grid item sm={6} md={4} key={index}>
                                 <Box
-                                    // onClick={() => handleOfferClick(offer)}
+                                    //onClick={() => handleOfferClick(offer.path)}
                                     // sx={{
                                     //     cursor: 'pointer',
                                     //     border: selectedOffer === offer ? '2px solid #3f51b5' : '2px solid transparent',

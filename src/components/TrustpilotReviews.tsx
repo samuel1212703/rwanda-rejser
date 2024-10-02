@@ -27,7 +27,7 @@ const TrustpilotReviews: React.FC = () => {
             try {
                 const response = await axios.get<ApiResponse>(API_URL, {
                     headers: {
-                        'Authorization': `Bearer ${API_KEY}`
+                        'Authorization': `Basic ${API_KEY}`
                     }
                 });
                 setReviews(response.data.reviews);

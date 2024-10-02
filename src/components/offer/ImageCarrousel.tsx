@@ -1,16 +1,13 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Box, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import { Box } from '@mui/material';
 
 interface BilledeKarruselProps {
     images: Array<{ src: string, alt: string }>;
 }
 
 const BilledeKarrusel: React.FC<BilledeKarruselProps> = ({ images }) => {
-    const { t } = useTranslation();
-
     return (
         <Box sx={{ maxWidth: '100%', margin: 'auto', marginBottom: 4 }}>
             <Carousel showThumbs={false} showStatus={false} infiniteLoop useKeyboardArrows autoPlay>
@@ -20,9 +17,6 @@ const BilledeKarrusel: React.FC<BilledeKarruselProps> = ({ images }) => {
                     </div>
                 ))}
             </Carousel>
-            <Typography variant="caption" display="block" textAlign="center" sx={{ mt: 2 }}>
-                {t('billedkarrusel_guide')}
-            </Typography>
         </Box>
     );
 }

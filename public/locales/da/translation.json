@@ -1,12 +1,6 @@
 {
     "companyName": "Rwanda Rejser",
     "companyAddress": "Kigalicenteret, Rwanda",
-    "pageNames": {
-        "about": "Om Os",
-        "contact": "Kontakt",
-        "blog": "Blog",
-        "rwanda": "Om Rwanda"
-    },
     "frontpage": {
         "name": "Forside",
         "welcomeTitle": "Oplev Rwanda",
@@ -17,10 +11,51 @@
         "title": "Vores Tilbud"
     },
     "offer": {
-        "imageCarouselText": "Swipe to see more"
+        "plan": {"title": "Dagsoversigt"}
     },
     "about": {
-        "name": "Om os"
+        "name": "Om os",
+        "priorities": {
+            "title": "Prioriteter",
+            "first": {
+                "title": "Integritet",
+                "description": "Det er en kerneværdi for os, at vi altid handler med høj integritet i vores virksomhed. Vores mål er at levere ærlige og pålidelige rejseoplevelser, hvor vi opretholder de højeste standarder for etik og moral i alle aspekter af vores arbejde."
+            },
+            "second": {
+                "title": "Fleksibilitet",
+                "description": "Vi bestræber os på at være fleksible for at imødekomme dine behov. Vi forstår, at hver rejse er unik, og vi arbejder tæt sammen med vores kunder for at tilpasse vores pakkerejser, så de passer præcis til dine ønsker og forventninger."
+            },
+            "third": {
+                "title": "Tillid",
+                "description": "Vi er ydmyge og taknemmelige over den tillid, du viser os ved at vælge os som din rejsearrangør. Vi vil gøre alt for at sikre, at denne tillid er berettiget. Vi har erfaring med, at en rejse til Rwanda er en særlig oplevelse for den enkelte rejsende, og derfor er vi engagerede i at gøre denne rejse til et uforglemmeligt eventyr."
+            },
+            "fourth": {
+                "title": "Transparens",
+                "description": "Det er afgørende for os, at du har fuld indsigt i, hvad der sker både før og under dit ophold i Rwanda. Vi ønsker, at du er informeret og bevidst om, hvad du betaler for. Derfor er transparens en af vores kerneværdier, som vi blandt andet opretholder ved at orientere dig om priser for alt, der tilrettelagt under rejsen. Vi tror på, at åbenhed styrker tilliden mellem os og vores kunder og reducerer risikoen for misforståelser."
+            },
+            "fifth": {
+                "title": "Kundeorienteret",
+                "description": "Vi sætter vores kunder i centrum for alt, hvad vi gør. Dine behov og ønsker er vores højeste prioritet, og vi arbejder utrætteligt på at sikre, at din oplevelse med os, forhåbentligt, overgår dine forventninger. Populært sagt, så er din tilfredshed vores succes."
+            },
+            "sixth": {
+                "title": "Innovation",
+                "description": "Vi stræber efter konstant innovation i vores tjenester og produkter. Vi er altid på udkig efter nye og spændende måder at forbedre dine rejseoplevelser på ved at holde os opdaterede relevante tendenser inden for rejsebranchen og oplevelsesmuligheder i Rwanda. Vores ønske er, at Rwanda skal være blandt danskernes rejsedestinationer."
+            }
+        },
+        "team": {
+            "title": "Holdet Bag"
+        },
+        "mission": {
+            "title": "Vores Mission",
+            "first": {
+                "title": "Sikkerhed og professionalisme",
+                "description": "Din sikkerhed under opholdet i Rwanda er afgørende for os. Rwanda er et af de sikreste lande i Afrika, hvorfor du i udgangspunkt ikke skal være bekymret for din sikkerhed. Vi sørger for, at du er velinformeret om de relevante sikkerhedsforanstaltninger og regler som besøgende. Vores professionelle team, både dansktalende medarbejder og lokale rwandere, er dedikerede til at sikre, at din rejse bliver både sikker og mindeværdig."
+            },
+            "second": {
+                "title": "Bæredygtighed",
+                "description": "Vi er optagede af og engagerede i at deltage og fremme bæredygtig turisme i Rwanda. Vores primære samarbejdspartnere er lokale rwandere, hvilket betyder, at din rejse dertil er med at skabe jobmuligheder for dem. Vi sørger for, at vores samarbejdspartnere naturligvis skal aflønnes i overensstemmelse med gældende retningslinjer i landet og med det stykke arbejde, de udfører. Ligeledes arbejder vi målrettet for, at aktiviteter har en positiv indvirkning på miljøet og samfundet. Vi ønsker at bidrage til at bevare Rwandas naturlige skønhed og kulturarv for fremtidige generationer, samtidig med at vi tilbyder uforglemmelige rejseoplevelser."
+            }
+        }
     },
     "contact": {
         "name": "Kontakt"
@@ -29,10 +64,11 @@
         "name": "Blog"
     },
     "rwanda": {
+        "name": "Rwanda",
         "title": "Om Rwanda",
-        "omrwanda1": "Rwanda, often referred to as the 'Land of a Thousand Hills,' is a country of stunning natural beauty. Nestled in the heart of Africa, Rwanda boasts lush green landscapes, majestic mountains, and serene lakes. This small yet diverse nation is known for its rich biodiversity, including the iconic mountain gorillas, which attract visitors from all over the world.",
-        "omrwanda2": "Beyond its natural beauty, Rwanda has a deep and complex history. The country has made remarkable strides in unity and reconciliation since the tragic events of 1994, emerging as a symbol of hope and resilience. Today, Rwanda is recognized for its safety, cleanliness, and rapid development, making it one of the most progressive nations in Africa.",
-        "omrwanda3": "Rwanda's vibrant culture is another highlight for visitors. The country is home to a mix of traditional and contemporary arts, music, and dance. The Rwandan people, known for their warmth and hospitality, take great pride in their cultural heritage. Whether you're exploring the bustling capital city of Kigali or visiting rural villages, Rwanda offers a unique and enriching travel experience."
+        "about1": "Rwanda, ofte kaldet 'De Tusind Bakkeres Land,' er et land med en betagende naturskønhed. Beliggende i hjertet af Afrika, byder Rwanda på frodige grønne landskaber, majestætiske bjerge og rolige søer. Denne lille, men mangfoldige nation er kendt for sin rige biodiversitet, herunder de ikoniske bjerggorillaer, som tiltrækker besøgende fra hele verden.",
+"about2": "Ud over sin naturlige skønhed har Rwanda en dyb og kompleks historie. Landet har gjort bemærkelsesværdige fremskridt i enhed og forsoning siden de tragiske begivenheder i 1994 og er nu et symbol på håb og modstandskraft. I dag er Rwanda anerkendt for sin sikkerhed, renlighed og hurtige udvikling, hvilket gør det til en af de mest progressive nationer i Afrika.",
+"about3": "Rwandas levende kultur er en anden højdepunkt for besøgende. Landet er hjemsted for en blanding af traditionelle og moderne kunstformer, musik og dans. Det rwandiske folk, kendt for deres varme og gæstfrihed, er stolte af deres kulturelle arv. Uanset om du udforsker den travle hovedstad Kigali eller besøger landlige landsbyer, tilbyder Rwanda en unik og berigende rejseoplevelse."
     },
     "TrustpilotTitle": "Trustpilot",
     "offerImageCarouselText": "Swipe for at se flere",

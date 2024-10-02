@@ -3,7 +3,7 @@ import { Container, Box, Typography } from '@mui/material';
 import TravelOffers from '../components/TravelOffers';
 import IntroImage from '../images/rwanda1.jpg';
 import FrontpageImage from '../components/FrontpageImage';
-import TrustpilotReviews from '../components/TrustpilotReviews';
+//import TrustpilotReviews from '../components/TrustpilotReviews';
 import FrontpageRwandaInfo from '../components/FrontpageRwandaInfo';
 import getOffers from '../offerData';
 import { useTranslation } from 'react-i18next';
@@ -27,16 +27,14 @@ export default function Frontpage() {
                         <div>{TravelOffers(getOffers(i18n.language))}</div>
                     </Fade>
                 </Box>
-            </Container>
-            <FrontpageRwandaInfo />
-            <Container maxWidth="lg" sx={{ padding: '2rem 0' }}>
-                <Fade in timeout={2000}>
+                {/* <Fade in timeout={2000}>
                     <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', marginBottom: '1rem' }}>
                         Trustpilot
                     </Typography>
                 </Fade>
-                <TrustpilotReviews />
+                <TrustpilotReviews /> */}
             </Container>
+            <FrontpageRwandaInfo />
         </div>
     );
 }
