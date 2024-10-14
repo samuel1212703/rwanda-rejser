@@ -11,6 +11,7 @@ const TravelOffers: React.FC<OfferTyping[]> = (offer: OfferTyping[]) => {
         <Box sx={{ flexGrow: 1, padding: { xs: '10px', sm: '20px' } }}>
             <Grid container spacing={4}>
                 {offer.map((t, index) => (
+                    t.type === 'standard' ? 
                     <Grid
                         item
                         xs={12}
@@ -57,7 +58,7 @@ const TravelOffers: React.FC<OfferTyping[]> = (offer: OfferTyping[]) => {
                                 </CardContent>
                             </Card>
                         </a>
-                    </Grid>
+                    </Grid> : null
                 ))}
             </Grid>
         </Box>

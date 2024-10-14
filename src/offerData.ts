@@ -1,11 +1,12 @@
 import { OfferTyping } from './types';
 import offerImage1 from './images/t1.jpg';
-import offerImage2 from './images/t2.jpg';
-import offerImage3 from './images/t3.jpg';
+import offerImage2 from './images/safari/SUV.jpg';
+import offerImage3 from './images/city/view.jpeg';
 
 const offerDataDa: OfferTyping[] = [
     {
         'path': 'offers/the-small-package',
+        'type': 'standard',
         'title': 'Den Lille Pakkerejse',
         'longTitle': 'Den lille pakkerejse til Rwanda',
         'description': 'Safaritur I Rwandas vilde natur',
@@ -55,6 +56,7 @@ const offerDataDa: OfferTyping[] = [
     },
     {
         'path': 'offer/cykel',
+        'type': 'standard',
         'title': 'Cykeltur',
         'longTitle': 'Cykeltur gennem Rwandas seje landskaber',
         'description': 'Safaritur I Rwandas vilde natur',
@@ -62,7 +64,24 @@ const offerDataDa: OfferTyping[] = [
     },
     {
         'path': 'offer/tre-uger',
+        'type': 'standard',
         'title': 'Tre uger i Rwanda',
+        'longTitle': 'Tre fede uger i Rwanda',
+        'description': 'Safaritur I Rwandas vilde natur',
+        'images': [{ 'alt': 'safari', 'src': offerImage3 }]
+    },
+    {
+        'path': 'offer/tre-uger',
+        'type': 'student',
+        'title': 'Gymnasieture',
+        'longTitle': 'Tre fede uger i Rwanda',
+        'description': 'Safaritur I Rwandas vilde natur',
+        'images': [{ 'alt': 'safari', 'src': offerImage3 }]
+    },
+    {
+        'path': 'offer/tre-uger',
+        'type': 'student',
+        'title': 'Universitetstuderende',
         'longTitle': 'Tre fede uger i Rwanda',
         'description': 'Safaritur I Rwandas vilde natur',
         'images': [{ 'alt': 'safari', 'src': offerImage3 }]
@@ -72,8 +91,9 @@ const offerDataDa: OfferTyping[] = [
 const offerDataEn: OfferTyping[] = [
     {
         'path': 'offer/lille-pakkerejse',
-        'title': 'Small travelpackage for Rwanda',
-        'longTitle': 'Den lille pakkerejse til Rwanda',
+        'type': 'standard',
+        'title': 'Small Travel Package',
+        'longTitle': 'Short trip with a lot to see',
         'description': 'Safaritur I Rwandas vilde natur',
         'images': [{ 'alt': 'safari', 'src': offerImage1 }],
         "dayPlan": [
@@ -121,14 +141,32 @@ const offerDataEn: OfferTyping[] = [
     },
     {
         'path': 'offer/cykel',
-        'title': 'Cykeltur',
-        'longTitle': 'Cykeltur gennem Rwandas seje landskaber',
+        'type': 'standard',
+        'title': 'Bicycle Journey',
+        'longTitle': 'An incredible view of Rwanda',
         'description': 'Safaritur I Rwandas vilde natur',
         'images': [{ 'alt': 'safari', 'src': offerImage2 }]
     },
     {
         'path': 'offer/tre-uger',
-        'title': 'Tre uger i Rwanda',
+        'type': 'standard',
+        'title': 'Three wheeks in Rwanda',
+        'longTitle': 'Tre fede uger i Rwanda',
+        'description': 'Safaritur I Rwandas vilde natur',
+        'images': [{ 'alt': 'safari', 'src': offerImage3 }]
+    },
+    {
+        'path': 'offer/tre-uger',
+        'type': 'student',
+        'title': 'Gymnasieture',
+        'longTitle': 'Tre fede uger i Rwanda',
+        'description': 'Safaritur I Rwandas vilde natur',
+        'images': [{ 'alt': 'safari', 'src': offerImage3 }]
+    },
+    {
+        'path': 'offer/tre-uger',
+        'type': 'student',
+        'title': 'Universitetstuderende',
         'longTitle': 'Tre fede uger i Rwanda',
         'description': 'Safaritur I Rwandas vilde natur',
         'images': [{ 'alt': 'safari', 'src': offerImage3 }]

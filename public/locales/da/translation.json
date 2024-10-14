@@ -11,7 +11,9 @@
         "title": "Vores Tilbud"
     },
     "offer": {
-        "plan": {"title": "Dagsoversigt"}
+        "plan": {
+            "title": "Dagsoversigt"
+        }
     },
     "about": {
         "name": "Om os",
@@ -58,7 +60,15 @@
         }
     },
     "contact": {
-        "name": "Kontakt"
+        "name": "Kontakt",
+        "title": "Kontakt Os",
+        "form": {
+            "name": "Navn",
+            "email": "E-mail",
+            "phone": "Telefonnummer",
+            "message": "Besked",
+            "submit": "Send besked"
+        }
     },
     "blog": {
         "name": "Blog"
@@ -67,8 +77,8 @@
         "name": "Rwanda",
         "title": "Om Rwanda",
         "about1": "Rwanda, ofte kaldet 'De Tusind Bakkeres Land,' er et land med en betagende naturskønhed. Beliggende i hjertet af Afrika, byder Rwanda på frodige grønne landskaber, majestætiske bjerge og rolige søer. Denne lille, men mangfoldige nation er kendt for sin rige biodiversitet, herunder de ikoniske bjerggorillaer, som tiltrækker besøgende fra hele verden.",
-"about2": "Ud over sin naturlige skønhed har Rwanda en dyb og kompleks historie. Landet har gjort bemærkelsesværdige fremskridt i enhed og forsoning siden de tragiske begivenheder i 1994 og er nu et symbol på håb og modstandskraft. I dag er Rwanda anerkendt for sin sikkerhed, renlighed og hurtige udvikling, hvilket gør det til en af de mest progressive nationer i Afrika.",
-"about3": "Rwandas levende kultur er en anden højdepunkt for besøgende. Landet er hjemsted for en blanding af traditionelle og moderne kunstformer, musik og dans. Det rwandiske folk, kendt for deres varme og gæstfrihed, er stolte af deres kulturelle arv. Uanset om du udforsker den travle hovedstad Kigali eller besøger landlige landsbyer, tilbyder Rwanda en unik og berigende rejseoplevelse."
+        "about2": "Ud over sin naturlige skønhed har Rwanda en dyb og kompleks historie. Landet har gjort bemærkelsesværdige fremskridt i enhed og forsoning siden de tragiske begivenheder i 1994 og er nu et symbol på håb og modstandskraft. I dag er Rwanda anerkendt for sin sikkerhed, renlighed og hurtige udvikling, hvilket gør det til en af de mest progressive nationer i Afrika.",
+        "about3": "Rwandas levende kultur er en anden højdepunkt for besøgende. Landet er hjemsted for en blanding af traditionelle og moderne kunstformer, musik og dans. Det rwandiske folk, kendt for deres varme og gæstfrihed, er stolte af deres kulturelle arv. Uanset om du udforsker den travle hovedstad Kigali eller besøger landlige landsbyer, tilbyder Rwanda en unik og berigende rejseoplevelse."
     },
     "TrustpilotTitle": "Trustpilot",
     "offerImageCarouselText": "Swipe for at se flere",

@@ -4,7 +4,7 @@ import { OfferTyping } from '../types';
 import { Offer } from './Offer';
 import { OfferCard } from '../components/offer/Card';
 import { useTranslation } from 'react-i18next';
-import { redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface OfferProps {
     offerData: OfferTyping[] | OfferTyping;
@@ -17,13 +17,6 @@ const isOfferArray = (data: OfferTyping | OfferTyping[]): data is OfferTyping[] 
 const Offers: React.FC<OfferProps> = ({ offerData }) => {
     const { t } = useTranslation();
     const theme = useTheme();
-    // const [selectedOffer, setSelectedOffer] = useState<OfferTyping | null>(
-    //     isOfferArray(offerData) ? offerData[0] : offerData
-    // );
-    const handleOfferClick = (offerPath: string) => {
-        redirect(offerPath)
-        //setSelectedOffer(offer);
-    };
 
     return (
         <Box>
@@ -34,18 +27,29 @@ const Offers: React.FC<OfferProps> = ({ offerData }) => {
                     </Typography>
                     <Grid container spacing={4}>
                         {offerData.map((offer, index) => (
+                            offer.type === 'standard' ? 
                             <Grid item sm={6} md={4} key={index}>
                                 <Box
-                                    //onClick={() => handleOfferClick(offer.path)}
-                                    // sx={{
-                                    //     cursor: 'pointer',
-                                    //     border: selectedOffer === offer ? '2px solid #3f51b5' : '2px solid transparent',
-                                    //     borderRadius: '8px',
-                                    // }}
                                 >
-                                    <OfferCard offer={offer} />
+                                    <Link to={offer.path} style={{ textDecoration: 'none' }}>
+                                        <OfferCard offer={offer} />
+                                    </Link>
                                 </Box>
-                            </Grid>
+                            </Grid> : null
+                        ))}
+                        <Typography variant="h4" component="h1" sx={{ width: '100%', marginTop: 4, color: theme.palette.common.white }}>
+                            Til Studenter
+                        </Typography>
+                        {offerData.map((offer, index) => (
+                            offer.type === 'student' ? 
+                            <Grid item sm={6} md={4} key={index}>
+                                <Box
+                                >
+                                    <Link to={offer.path} style={{ textDecoration: 'none' }}>
+                                        <OfferCard offer={offer} />
+                                    </Link>
+                                </Box>
+                            </Grid> : null
                         ))}
                     </Grid>
                 </Box>
@@ -54,15 +58,6 @@ const Offers: React.FC<OfferProps> = ({ offerData }) => {
                     <Offer offer={offerData} />
                 </div>
             )}
-
-            {/* {selectedOffer && (
-                <Box sx={{ marginTop: 3, padding: 4, backgroundColor: theme.palette.common.white, borderRadius: '8px' }}>
-                    <Typography variant="h4" component="h2" sx={{ marginBottom: 4 }}>
-                        {selectedOffer.title}
-                    </Typography>
-                    <Offer offer={selectedOffer} />
-                </Box>
-            )} */}
         </Box>
     );
 }

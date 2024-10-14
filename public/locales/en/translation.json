@@ -11,7 +11,10 @@
     "title": "Our Offers"
   },
   "offer": {
-    "imageCarouselText": "Swipe to see more"
+    "imageCarouselText": "Swipe to see more",
+    "plan": {
+      "title": "Contents"
+    }
   },
   "about": {
     "name": "About us",
@@ -39,8 +42,16 @@
     ]
   },
   "contact": {
-    "name": "Contact"
-  },
+        "name": "Contact",
+        "title": "Contact Us",
+        "form": {
+            "name": "Name",
+            "email": "E-mail",
+            "phone": "Telephone Number",
+            "message": "Message",
+            "submit": "Send message"
+        }
+    },
   "blog": {
     "name": "Blog"
   },

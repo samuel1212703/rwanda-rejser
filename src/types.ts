@@ -15,6 +15,7 @@ export interface BlogPost {
 
 export interface OfferTyping {
     path: string;
+    type: string;
     longTitle: string;
     title: string;
     description: string;
